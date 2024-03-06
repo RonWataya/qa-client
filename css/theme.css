@@ -194,7 +194,7 @@
     width: 16px; /* Custom width */
     height: 16px; /* Custom height */
     background-color: #f0f8ff; /* Lighter blue background when not checked */
-    border: 2px solid #007bff; /* Light blue border */
+    border: 2px solid #73b2f5; /* Light blue border */
     cursor: pointer; /* Change cursor to pointer when hovering over the checkbox */
     position: relative; /* Needed for positioning the pseudo-element */
     margin-right: 7px; /* Space between checkbox and text */
@@ -218,7 +218,7 @@
 }
 
 .my-paragraph-list li input[type="checkbox"]:checked {
-    background-color: #007bff; /* Light blue background when checked */
+    background-color: #7eb7f5; /* Light blue background when checked */
 }
 
 
