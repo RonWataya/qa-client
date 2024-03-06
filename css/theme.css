@@ -203,7 +203,7 @@ input[type='checkbox'].mr-10 {
 
 /* Style for when the checkbox is checked */
 input[type='checkbox'].mr-10:checked {
-    content: '✖';
+   
     background-color: #007BFF; /* Change background to blue when checked */
     border-color: #0056b3; /* Darker border when checked for contrast */
 }
