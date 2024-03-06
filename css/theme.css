@@ -183,7 +183,7 @@
     margin-right: 7px; /* Space between checkbox and text */
     vertical-align: middle; /* Align checkbox with text vertically */
     position: relative; /* Allow fine control over positioning */
-    top: -3px; 
+    top: -4px; 
 }
 .my-paragraph-list li input[type="checkbox"] {
     -webkit-appearance: none; /* Chrome, Safari, Opera */
@@ -191,10 +191,10 @@
     appearance: none;
     
     /* Custom checkbox styling */
-    width: 16px; /* Custom width */
-    height: 16px; /* Custom height */
+    width: 15px; /* Custom width */
+    height: 15px; /* Custom height */
     background-color: #f0f8ff; /* Lighter blue background when not checked */
-    border: 2px solid #73b2f5; /* Light blue border */
+    border: 2px solid #b4c7db; /* Light blue border */
     cursor: pointer; /* Change cursor to pointer when hovering over the checkbox */
     position: relative; /* Needed for positioning the pseudo-element */
     margin-right: 7px; /* Space between checkbox and text */
@@ -218,7 +218,8 @@
 }
 
 .my-paragraph-list li input[type="checkbox"]:checked {
-    background-color: #7eb7f5; /* Light blue background when checked */
+    background-color: #8dbff4; /* Light blue background when checked */
+    border: 2px solid #acaeb0; /* Light blue border */
 }
 
 
