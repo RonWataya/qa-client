@@ -232,8 +232,11 @@
 /* Ensure the list has no bullets and has padding */
 .my-context-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 15px;
+    margin: 0; /* Remove default margin */
+    background: #f9f9f9; /* Light background for the entire list */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners for the list */
 }
 
 /* Style for list items for better visibility and spacing */
@@ -241,10 +244,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between; /* This ensures content and checkbox are spaced apart */
-    padding: 10px;
-    border-bottom: 1px solid #ccc; /* Visual separation between items */
+  
+    border-bottom: 1px solid #cbc0c0; /* Visual separation between items */
+    
+    padding: 10px 15px; /* Adjust padding for better spacing */
+    border-bottom: 1px solid #eee;
+    cursor: pointer; /* Change cursor to indicate clickable items */
+    transition: background-color 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+}
+.my-context-list li:hover {
+    background-color: #fafcfd; /* Lighter background on hover for feedback */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Slight shadow for raised effect */
 }
 
+.my-context-list li:last-child {
+    border-bottom: none;
+}
 /* Custom styling for the checkbox */
 input[type='checkbox'].mr-10 {
     -webkit-appearance: none;
