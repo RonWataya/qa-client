@@ -184,33 +184,46 @@
 
 /* Custom styling for the checkbox */
 input[type='checkbox'].mr-10 {
-    /* Hide the native checkbox appearance */
-    -webkit-appearance: none; /* Chrome, Safari, Opera */
-    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
-
-    /* Custom checkbox appearance */
-    width: 10px; /* Custom width */
-    height: 20px; /* Custom height */
-    background-color: white; /* Background color */
-    border: 2px solid #555; /* Border */
-    position: relative; /* For positioning the "X" */
-    display: inline-block; /* To display it inline */
     margin-left: 60px;
     padding-left: 20px;
-   
+    width: 20px; /* Increased width */
+    height: 20px; /* Square aspect ratio */
+    background-color: white;
+    border: 2px solid #007BFF; /* Use a blue border for a blueish theme */
+    border-radius: 4px; /* Rounded corners */
+    position: relative;
+    display: inline-block;
+    cursor: pointer; /* Change cursor to pointer to indicate clickable item */
+    outline: none; /* Remove outline to avoid box shadow on click in some browsers */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for visual feedback */
 }
 
-input[type='checkbox'].mr-10:checked:after,
+/* Style for when the checkbox is checked */
+input[type='checkbox'].mr-10:checked {
+    content: '✖';
+    background-color: #007BFF; /* Change background to blue when checked */
+    border-color: #0056b3; /* Darker border when checked for contrast */
+}
+
+/* Custom check mark */
 input[type='checkbox'].mr-10:after {
-    content: '✖'; /* Using an 'X' or similar character */
+    content: '✖'; /* Use a check mark */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #555; /* "X" color */
-    font-size: 16px; /* Adjust as needed */
+    color: rgb(85, 155, 199); /* White check mark for contrast */
+    font-size: 14px; /* Adjusted font size */
 }
+
+/* Optionally, style the checkbox when hovering to provide feedback before clicking */
+input[type='checkbox'].mr-10:hover {
+    border-color: #0056b3; /* Darken border on hover */
+}
+
 
 /* Since we want the "X" to always appear, you might not need the :checked pseudo-class */
 
