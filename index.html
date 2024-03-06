@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document Lab</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e7eff6;
+  }
+  .login-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .form-input {
+    margin-bottom: 20px;
+  }
+  input[type="text"], input[type="submit"] {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  input[type="submit"] {
+    
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-left: 9px;
+  }
+  input[type="submit"]:hover {
+    opacity: 0.9;
+  }
+</style>
+</head>
+<body>
+
+<div class="login-form">
+  <h2>Login with Token</h2>
+  <form id="loginForm">
+    <div class="form-input">
+      <input type="text" id="token" placeholder="Enter your token" required>
+    </div>
+    <input type="submit" value="Continue">
+  </form>
+</div>
+
+<script src="lib/token.js"></script>
+</body>
+</html>

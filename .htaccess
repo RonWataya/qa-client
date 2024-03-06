@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirect requests without .html to the version with .html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ $1.html [L]
