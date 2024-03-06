@@ -256,6 +256,7 @@ input[type='checkbox'].mr-10:after {
 }
 
 .my-col-textarea {
+    font-family: 'Poppins', sans-serif;
     flex: 1; /* Allows the textbox to grow */
 }
 

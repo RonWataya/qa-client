@@ -55,6 +55,8 @@
 		============================================ -->
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
     <!-- modernizr JS
 		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -116,8 +118,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
-                        <li class="active"><a data-toggle="tab" href="#Home"><i
-                                    class="notika-icon notika-house"></i><span
+                        <li class="active"><a data-toggle="tab" href="#Home"><span
                                     style="color: rgb(24, 74, 110);">Home</span></a>
                         </li>
                         <li><a data-toggle="tab" href="#admin"><i class="notika-icon notika-add-todo"></i><span
@@ -158,20 +159,21 @@
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <div class="my-form-group">
 
-                        <textarea id="questionBox" rows="6" class="my-form-control"
+                        <textarea id="questionBox" rows="7" class="my-form-control"
                             placeholder="Ask a question"></textarea>
                         <div id="suggestions"
-                            style="background: #fff; cursor: pointer; position: relative; max-height: 200px; overflow-y: auto; display: none;">
+                            style="background: #F9F9F9; cursor: default; position: relative; max-height: 200px; overflow-y: auto; display: none; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px; font-family: 'Poppins', sans-serif;">
                             <!-- Suggestions will be populated here -->
                             <span id="closeSuggestions"
-                                style="position: absolute; bottom: 10px; right: 10px; cursor: pointer; padding: 5px; background-color: red; color: white; border-radius: 50%;">&times;</span>
+                                style="position: absolute; top: 10px; right: 10px; cursor: pointer; padding: 5px 8px; background-color: #3498db; color: white; border-radius: 50%;">&times;</span>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12">
                     <div class="my-form-group">
 
-                        <textarea id="answerBox" rows="6" class="my-form-control" placeholder="Answer"
+                        <textarea id="answerBox" rows="7" class="my-form-control" placeholder="Answer"
                             readonly></textarea>
                         <div class="notika-todo-btn">
                             <a href="" id="loadContextBtn" class="pull-right btn btn-primary btn-sm disabled-link"
@@ -281,15 +283,15 @@
             </div>
         </div>
     </div>
-    <br>
+    <br><br>
     <div class="sale-statistic-area">
         <div class="container">
             <div class="my-row">
                 <div class="my-col-zero">
 
                     <div class="notika-todo-btn">
-                        <a href="" id="generate-answer" class="pull-center btn btn-primary btn-sm "
-                            style="margin-left: 10px;" onclick="event.preventDefault();">Generate new answer</a>
+                        <a href="" id="generate-answer" class="pull-right btn btn-primary btn-sm "
+                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;" onclick="event.preventDefault();">Generate new answer</a>
                     </div>
                 </div>
             </div>
@@ -315,11 +317,11 @@
             <div class="my-row">
                 <div class="my-col-zero">
                     <div class="notika-todo-btn">
-                        <a href="" id="update" class="pull-left btn btn-primary btn-sm " style="margin-left: 10px;"
+                        <a href="" id="update" class="pull-right btn btn-primary btn-sm " style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
                             onclick="event.preventDefault();">Update Answer</a>
                     </div>
                     <div class="notika-todo-btn">
-                        <a href="" id="create" class="pull-left btn btn-primary btn-sm " style="margin-left: 10px;"
+                        <a href="" id="create" class="pull-right btn btn-primary btn-sm " style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
                             onclick="event.preventDefault();">Create new Q/A</a>
                     </div>
 
