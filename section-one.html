@@ -274,8 +274,8 @@
                             </ul>
                         </div>
                         <div class="my-card-footer text-center">
-                            <input type="button" id="addToContextBtn" value="Add to context"
-                                style="background-color: rgb(218, 233, 243); color: #48968e; cursor: pointer; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" />
+                            <input type="button" id="addToContextBtn" class="btn btn-primary" value="Add to context"
+                                style="font-weight:900; background-color: #2dc391; color: #f8fbfb; cursor: pointer; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 15px; padding: 10px 15px;" />
                         </div>
                     </div>
                 </div>
@@ -290,8 +290,9 @@
                 <div class="my-col-zero">
 
                     <div class="notika-todo-btn">
-                        <a href="" id="generate-answer" class="pull-right btn btn-primary btn-sm "
-                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;" onclick="event.preventDefault();">Generate new answer</a>
+                        <a href="" id="generate-answer" class="pull-right btn btn-primary btn-sm button-inactive"
+                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
+                            onclick="event.preventDefault();">Generate new answer</a>
                     </div>
                 </div>
             </div>
@@ -317,11 +318,13 @@
             <div class="my-row">
                 <div class="my-col-zero">
                     <div class="notika-todo-btn">
-                        <a href="" id="update" class="pull-right btn btn-primary btn-sm " style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
+                        <a href="" id="update" class="pull-right btn btn-primary btn-sm button-inactive"
+                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
                             onclick="event.preventDefault();">Update Answer</a>
                     </div>
                     <div class="notika-todo-btn">
-                        <a href="" id="create" class="pull-right btn btn-primary btn-sm " style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
+                        <a href="" id="create" class="pull-right btn btn-primary btn-sm button-inactive"
+                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
                             onclick="event.preventDefault();">Create new Q/A</a>
                     </div>
 
@@ -332,28 +335,28 @@
     <!-- End Realtime sts area-->
     <!--Modal-->
     <!-- Modal Structure -->
-<!-- Enhanced Modal Structure -->
-<!-- Modal Structure -->
-<div id="modal" class="modal" style="display: none;">
-    <div class="modal-content">
-      <div class="modal-header">
-       
-      </div>
-      <div class="modal-body">
-        <h3 id="modal-text"></h3>
-       
-      </div>
-      <div class="modal-footer">
-        <span class="close-button">Okay</span>
-      </div>
+    <!-- Enhanced Modal Structure -->
+    <!-- Modal Structure -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body">
+                <h3 id="modal-text"></h3>
+
+            </div>
+            <div class="modal-footer">
+                <span class="close-button">Okay</span>
+            </div>
+        </div>
     </div>
-  </div>
-  
 
 
-  
-  
-  
+
+
+
+
     <!-- Start Footer area-->
     <div class="footer-copyright-area" style="background-color: rgb(43, 157, 239);">
         <div class="container">
