@@ -89,22 +89,19 @@
                     <div class="mobile-menu">
                         <nav id="dropdown">
                             <ul class="mobile-menu-nav">
-                                <li><a data-toggle="collapse" data-target="#Charts" href="#"><span
-                                            style="color: rgb(24, 74, 110);">Home</span></a>
+                                <li><a data-toggle="collapse" data-target="#Charts" href="#"><span style="color: rgb(24, 74, 110);">Home</span></a>
                                     <ul class="collapse dropdown-header-top">
-                                        <li><a href="section-one.html">Answers</a></li>
-                                        <li><a href="">Questions</a></li>
-
+                                        <li class="menu-item"><a href="section-one.html" class="menu-link">Answers</a></li>
+                                        <li class="menu-item"><a href="section-two.html" class="menu-link">Questions</a></li>
                                     </ul>
                                 </li>
                                 <li><a data-toggle="collapse" data-target="#demoevent" href="#">Admin</a>
                                     <ul id="demoevent" class="collapse dropdown-header-top">
-                                        <li><a href="#" id="endSessionLink" onclick="event.preventDefault();">End
-                                                Session</a></li>
+                                        <li><a href="#" id="endSessionLink" onclick="event.preventDefault();">End Session</a></li>
                                     </ul>
                                 </li>
-
                             </ul>
+                            
                         </nav>
                     </div>
                 </div>
@@ -129,9 +126,9 @@
                     <div class="tab-content custom-menu-content">
                         <div id="Home" class="tab-pane in active notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
-                                <li><a href="section-one.html"><span style="color: rgb(24, 74, 110);">Answers</span></a>
+                                <li><a href="answers.html"><span style="color: rgb(24, 74, 110);" class="menu-link">Answers</span></a>
                                 </li>
-                                <li><a href=""><span style="color: rgb(24, 74, 110);">Questions</span></a>
+                                <li><a href="questions.html"><span style="color: rgb(55, 200, 230);" class="menu-link">Questions</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -146,83 +143,9 @@
         </div>
     </div>
     <!-- Main Menu area End-->
-    <!-- Start Status area -->
 
-
-
-    <!-- End Sale Statistic area-->
-    <!-- Start Email Statistic area-->
-    <div class="notika-email-post-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                    <div class="my-form-group">
-
-                        <textarea id="questionBox" rows="7" class="my-form-control"
-                            placeholder="Ask a question"></textarea>
-                        <div id="suggestions"
-                            style="background: #F9F9F9; cursor: default; position: relative; max-height: 200px; overflow-y: auto; display: none; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px; font-family: 'Poppins', sans-serif;">
-                            <!-- Suggestions will be populated here -->
-                            <span id="closeSuggestions"
-                                style="position: absolute; top: 10px; right: 10px; cursor: pointer; padding: 5px 8px; background-color: #3498db; color: white; border-radius: 50%;">&times;</span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12">
-                    <div class="my-form-group">
-
-                        <textarea id="answerBox" rows="7" class="my-form-control" placeholder="Answer"
-                            readonly></textarea>
-                        <div class="notika-todo-btn">
-                            <a href="" id="loadContextBtn" class="pull-right btn btn-primary btn-sm disabled-link"
-                                style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
-                                onclick="event.preventDefault();">Load Context</a>
-                        </div>
-
-                        <div class="notika-todo-btn">
-                            <a href="#" class="pull-right btn btn-primary btn-sm" id="clearAnswer"
-                                style="margin-right: 10px; font-size: 15px; padding: 10px 15px;"
-                                onclick="event.preventDefault();">Clear text</a>
-                        </div>
-
-                    </div>
-                    <div id="typingNotification"
-                        style="display: none; position: absolute; background-color: lightblue; padding: 10px; border-radius: 5px; margin-top: -40px; right: 70%;">
-                        You are typing a new question...</div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-    <br><br>
-    <!-- context-->
-    <div class="sale-statistic-area">
-        <div class="container">
-            <div class="my-row">
-                <div class="my-col-large">
-                    <div class="my-card member-panel">
-                        <div
-                            style="margin-top: 10px; margin-left: 10px; margin-right:10px; padding-bottom: 10px; border-bottom: 2px solid rgb(197, 213, 225);">
-                            <span
-                                style="color: rgb(24, 74, 110); font-family: Arial, Helvetica, sans-serif; font-weight: 600; font-size: 15px;">Context
-                                View</span>
-                        </div>
-                        <div class="my-card-body">
-                            <ul class="my-context-list" id="contextList">
-                                <!-- Contexts will be loaded here -->
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Start Status area -->
-    <div class="notika-status-area">
+     <!-- Select Document -->
+     <div class="notika-status-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -249,12 +172,10 @@
 
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
-    </div>
+   
 
     <div class="sale-statistic-area">
         <div class="container">
@@ -282,6 +203,35 @@
             </div>
         </div>
     </div>
+
+    <br><br>
+    <!-- context-->
+    <div class="sale-statistic-area">
+        <div class="container">
+            <div class="my-row">
+                <div class="my-col-large">
+                    <div class="my-card member-panel">
+                        <div
+                            style="margin-top: 10px; margin-left: 10px; margin-right:10px; padding-bottom: 10px; border-bottom: 2px solid rgb(197, 213, 225);">
+                            <span
+                                style="color: rgb(24, 74, 110); font-family: Arial, Helvetica, sans-serif; font-weight: 600; font-size: 15px;">Context
+                                View</span>
+                        </div>
+                        <div class="my-card-body">
+                            <ul class="my-context-list" id="contextList">
+                                <!-- Contexts will be loaded here -->
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Questions-->   
     <br><br>
     <div class="sale-statistic-area">
         <div class="container">
@@ -289,9 +239,9 @@
                 <div class="my-col-zero">
 
                     <div class="notika-todo-btn">
-                        <a href="" id="generate-answer" class="pull-right btn btn-primary btn-sm button-inactive"
+                        <a href="" id="generate-question" class="pull-left btn btn-primary btn-sm button-inactive"
                             style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
-                            onclick="event.preventDefault();">Generate new answer</a>
+                            onclick="event.preventDefault();">Generate Questions </a>
                     </div>
                 </div>
             </div>
@@ -304,8 +254,114 @@
 
                 <div class="my-col-textarea my-col-textarea-new-answer">
                     <div class="my-form-group">
-                        <textarea id="newanswerBox" rows="7" class="my-form-control"
+                        <textarea id="questionsBox" rows="7" class="my-form-control"
                             placeholder="Generated Answer"></textarea>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="sale-statistic-area">
+        <div class="container">
+            <div class="my-row">
+                <div class="my-col-zero">
+
+                    <div class="notika-todo-btn">
+                        <a href="" id="generate-answer" class="pull-left btn btn-primary btn-sm button-inactive"
+                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
+                            onclick="event.preventDefault();">Generate Answers </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="sale-statistic-area">
+        <div class="container">
+            <div class="my-row my-filter-row">
+
+                <div class="my-col-textarea my-col-textarea-new-answer">
+                    <div class="my-form-group">
+                        <textarea id="answersBox" rows="7" class="my-form-control"
+                            placeholder="Generated Answer"></textarea>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <br><br>
+    <div class="sale-statistic-area">
+        <div class="container">
+            <div class="my-row">
+                <div class="my-col-zero">
+
+                    <div class="notika-todo-btn">
+                        <a href="" id="copy-to-draft" class="pull-left btn btn-primary btn-sm button-inactive"
+                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
+                            onclick="event.preventDefault();">Copy to draft </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="sale-statistic-area">
+        <div class="container">
+            <div class="my-row my-filter-row">
+
+                <div class="my-col-textarea my-col-textarea-new-answer">
+                    <div class="recent-items-wp notika-shadow sm-res-mg-t-30">
+                        <div class="rc-it-ltd">
+                            <div class="recent-items-ctn">
+                                <div class="recent-items-title">
+                                    <h2>Draft</h2>
+                                </div>
+                            </div>
+                            <div class="recent-items-inn">
+                                <table class="table table-inner table-vmiddle">
+                                    <thead>
+                                        <tr>
+                                            <th>Question</th>
+                                            <th>Answer</th>
+                                            <th style="width: 60px">Context</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="f-500 c-cyan">Question one</td>
+                                            <td>Answer one</td>
+                                            <td class="f-500 c-cyan">DOC 1: 23,45</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="f-500 c-cyan">Question one</td>
+                                            <td>Answer one</td>
+                                            <td class="f-500 c-cyan">DOC 1: 23,45</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="f-500 c-cyan">Question one</td>
+                                            <td>Answer one</td>
+                                            <td class="f-500 c-cyan">DOC 1: 23,45</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="f-500 c-cyan">Question one</td>
+                                            <td>Answer one</td>
+                                            <td class="f-500 c-cyan">DOC 1: 23,45</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="f-500 c-cyan">Question one</td>
+                                            <td>Answer one</td>
+                                            <td class="f-500 c-cyan">DOC 1: 23,45</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+							
+                        </div>
                     </div>
                 </div>
 
@@ -319,12 +375,17 @@
                     <div class="notika-todo-btn">
                         <a href="" id="update" class="pull-right btn btn-primary btn-sm button-inactive"
                             style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
-                            onclick="event.preventDefault();">Update Answer</a>
+                            onclick="event.preventDefault();">Preview</a>
+                    </div>
+                    <div class="notika-todo-btn">
+                        <a href="" id="update" class="pull-right btn btn-primary btn-sm button-inactive"
+                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
+                            onclick="event.preventDefault();">Print</a>
                     </div>
                     <div class="notika-todo-btn">
                         <a href="" id="create" class="pull-right btn btn-primary btn-sm button-inactive"
                             style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
-                            onclick="event.preventDefault();">Create new Q/A</a>
+                            onclick="event.preventDefault();">Save to DB</a>
                     </div>
 
                 </div>
@@ -373,7 +434,7 @@
 
     <!-- jquery
 		============================================ -->
-    <script src="lib/script.js"></script>
+    <script src="lib/questions.js"></script>
     <script>src = "lib/layout.js"</script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <!-- bootstrap JS

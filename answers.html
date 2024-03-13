@@ -54,7 +54,9 @@
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="css/responsive.css">
-     <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
     <!-- modernizr JS
 		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -65,15 +67,16 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <!-- Start Header Top Area -->
-    <div class="header-top-area" style="background-color: rgb(43, 157, 239);">
+    <div class="header-top-area" style="background-color: rgb(43, 193, 239);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="logo-area">
-                        <a href="#"><img src="img/favicon.ico" alt="" />&nbsp;<span style="color: white;font-weight: 700;">Question & Answer Review</span></a>
+                        <a href="#"><img src="" alt="" />&nbsp;<span style="color: white;font-weight: 700;">Question &
+                                Answer Review</span></a>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -86,21 +89,19 @@
                     <div class="mobile-menu">
                         <nav id="dropdown">
                             <ul class="mobile-menu-nav">
-                                <li><a data-toggle="collapse" data-target="#Charts" href="#">Home</a>
+                                <li><a data-toggle="collapse" data-target="#Charts" href="#"><span style="color: rgb(24, 74, 110);">Home</span></a>
                                     <ul class="collapse dropdown-header-top">
-                                        <li><a href="index.html">Section One</a></li>
-                                        <li><a href="index-2.html">Section Two</a></li>
-                                        
+                                        <li class="menu-item"><a href="answers.html" class="menu-link">Answers</a></li>
+                                        <li class="menu-item"><a href="questions.html" class="menu-link">Questions</a></li>
                                     </ul>
                                 </li>
                                 <li><a data-toggle="collapse" data-target="#demoevent" href="#">Admin</a>
                                     <ul id="demoevent" class="collapse dropdown-header-top">
-                                        <li><a href="login.html">End Session</a>
+                                        <li><a href="#" id="endSessionLink" onclick="event.preventDefault();">End Session</a></li>
                                     </ul>
                                 </li>
-                               
-                               
                             </ul>
+                            
                         </nav>
                     </div>
                 </div>
@@ -114,128 +115,154 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
-                        <li class="active"><a data-toggle="tab" href="#Home"><i class="notika-icon notika-house"></i> Home</a>
+                        <li class="active"><a data-toggle="tab" href="#Home"><span
+                                    style="color: rgb(24, 74, 110);">Home</span></a>
                         </li>
-                        <li><a data-toggle="tab" href="#admin"><i class="notika-icon notika-add-todo"></i> Admin</a>
+                        <li><a data-toggle="tab" href="#admin"><i class="notika-icon notika-add-todo"></i><span
+                                    style="color: rgb(24, 74, 110);">Admin</span></a>
                         </li>
-                        
+
                     </ul>
                     <div class="tab-content custom-menu-content">
                         <div id="Home" class="tab-pane in active notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
-                                <li><a href="section-one.html">Section One</a>
+                                <li><a href="answers.html"><span style="color: rgb(55, 200, 230);" class="menu-link">Answers</span></a>
                                 </li>
-                                <li><a href="section-two.html">Section Two</a>
-                                </li>                             
+                                <li><a href="questions.html"><span style="color: rgb(24, 74, 110);" class="menu-link">Questions</span></a>
+                                </li>
                             </ul>
                         </div>
                         <div id="admin" class="tab-pane notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
-                                <li><a href="index.html">End Session</a>
-                                </li>                                    
+                                <li><a href="#" id="endSessionLink" onclick="endSession();">End Session</a></li>
                             </ul>
-                        </div>                       
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Main Menu area End-->
-    <!-- Start Status area -->
-    
-    <!-- End Status area-->
-    <!-- Start Sale Statistic area-->
-    
-    <!-- End Sale Statistic area-->
-    <!-- Start Email Statistic area-->
+   
+    <!-- Questions and answers-->
     <div class="notika-email-post-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <div class="my-form-group">
-                        
-                        <textarea id="questionBox" rows="6" class="my-form-control" placeholder="Ask a question"></textarea>
-                        <div id="suggestions" style="background: #fff; cursor: pointer; position: relative; max-height: 200px; overflow-y: auto; display: none;">
+
+                        <textarea id="questionBox" rows="7" class="my-form-control"
+                            placeholder="Ask a question"></textarea>
+                        <div id="suggestions"
+                            style="background: #F9F9F9; cursor: default; position: relative; max-height: 200px; overflow-y: auto; display: none; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px; font-family: 'Poppins', sans-serif;">
                             <!-- Suggestions will be populated here -->
-                            <span id="closeSuggestions" style="position: absolute; bottom: 10px; right: 10px; cursor: pointer; padding: 5px; background-color: red; color: white; border-radius: 50%;">&times;</span>
+                            <span id="closeSuggestions"
+                                style="position: absolute; top: 10px; right: 10px; cursor: pointer; padding: 5px 8px; background-color: #3498db; color: white; border-radius: 50%;">&times;</span>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12">
                     <div class="my-form-group">
-                        <div id="typingNotification" style="display: none; position: absolute; background-color: lightblue; padding: 10px; border-radius: 5px; margin-top: -15px; left: 10%;">You are typing a new question...</div>
-                        <textarea id="answerBox" rows="6" class="my-form-control" placeholder="Answer" readonly></textarea> 
+
+                        <textarea id="answerBox" rows="7" class="my-form-control" placeholder="Answer"
+                            readonly></textarea>
                         <div class="notika-todo-btn">
-                            <a href="" id="loadContextBtn" class="pull-right btn btn-primary btn-sm disabled-link">Load Context</a> 
+                            <a href="" id="loadContextBtn" class="pull-right btn btn-primary btn-sm disabled-link"
+                                style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
+                                onclick="event.preventDefault();">Load Context</a>
                         </div>
+
                         <div class="notika-todo-btn">
-                            <a href="#" class="pull-right btn btn-primary btn-sm" id="clearAnswer">Clear text</a>
+                            <a href="#" class="pull-right btn btn-primary btn-sm" id="clearAnswer"
+                                style="margin-right: 10px; font-size: 15px; padding: 10px 15px;"
+                                onclick="event.preventDefault();">Clear text</a>
                         </div>
-                        
+
                     </div>
+                    <div id="typingNotification"
+                        style="display: none; position: absolute; background-color: lightblue; padding: 10px; border-radius: 5px; margin-top: -40px; right: 70%;">
+                        You are typing a new question...</div>
                 </div>
-                
-                   
-                
+
+
             </div>
         </div>
     </div>
-    <!-- End Email Statistic area-->
-    <!-- Start Realtime sts area-->
+    <br><br>
+
+    <!-- context-->
     <div class="sale-statistic-area">
         <div class="container">
             <div class="my-row">
                 <div class="my-col-large">
                     <div class="my-card member-panel">
-                        <div style="margin-top: 10px; margin-left: 10px; margin-right:10px; padding-bottom: 10px; border-bottom: 2px solid rgb(197, 213, 225);">
-                            <span style="color: rgb(24, 74, 110); font-family: Arial, Helvetica, sans-serif; font-weight: 600; font-size: 15px;">Context View</span>
+                        <div
+                            style="margin-top: 10px; margin-left: 10px; margin-right:10px; padding-bottom: 10px; border-bottom: 2px solid rgb(197, 213, 225);">
+                            <span
+                                style="color: rgb(24, 74, 110); font-family: Arial, Helvetica, sans-serif; font-weight: 600; font-size: 15px;">Context
+                                View</span>
                         </div>
                         <div class="my-card-body">
                             <ul class="my-context-list" id="contextList">
                                 <!-- Contexts will be loaded here -->
                             </ul>
                         </div>
-                        
+
                     </div>
-                </div>   
-             
+                </div>
+
             </div>
         </div>
     </div>
-     <!-- Start Status area -->
-     <div class="sale-statistic-area">
+
+    <!-- Documents -->
+    <div class="notika-status-area">
         <div class="container">
-            <div class="my-row my-filter-row">
-                <div class="my-col">
-        
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                     <div class="my-form-group my-select-focus">
                         <label class="my-focus-label" style="visibility: hidden;">Select Document</label>
-                        <select id="documentSelect" class="my-select floating" style="color: rgb(24, 74, 110); font-weight: 700; font-size: 15px;">
+                        <select id="documentSelect" class="my-select floating"
+                            style="color: rgb(24, 74, 110); font-weight: 700; font-size: 15px;">
                             <option>Select Document</option>
                             <!-- Options will be dynamically populated here -->
                         </select>
                     </div>
                 </div>
-                <div class="my-form-group my-select-focus">
-        
-                    <div class="my-form-group" >
-                        <label class="my-focus-label" style="visibility: hidden;">Search by phrase or keyword</label>
-                        <input type="text" class="my-form-control floating" id="searchPhrase" placeholder="Search a phrase" style="color: rgb(27, 32, 34); font-family: Arial, Helvetica, sans-serif;">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="my-form-group my-select-focus">
+
+                        <div class="my-form-group" sty>
+                            <label class="my-focus-label" style="visibility: hidden;">Search by phrase or
+                                keyword</label>
+                            <input type="text" class="my-form-control floating" id="searchPhrase"
+                                placeholder="Search a phrase"
+                                style="color: rgb(27, 32, 34); font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+
+                        </div>
 
                     </div>
-        
                 </div>
+
+
             </div>
         </div>
     </div>
+    </div>
+
+ <!-- Paragraphs -->
+
     <div class="sale-statistic-area">
         <div class="container">
             <div class="my-row">
-                   
+
                 <div class="my-col-large">
                     <div class="my-card member-panel">
-                        <div style="margin-top: 10px; margin-left: 10px; margin-right:10px; padding-bottom: 10px; border-bottom: 2px solid rgb(197, 213, 225);">
-                            <span style="color: rgb(24, 74, 110); font-family: Arial, Helvetica, sans-serif; font-weight: 600; font-size: 15px;">Paragraphs</span>
+                        <div
+                            style="margin-top: 10px; margin-left: 10px; margin-right:10px; padding-bottom: 10px; border-bottom: 2px solid rgb(197, 213, 225);">
+                            <span
+                                style="color: rgb(24, 74, 110); font-family: Arial, Helvetica, sans-serif; font-weight: 600; font-size: 15px;">Paragraphs</span>
                         </div>
                         <div class="my-card-body">
                             <ul class="my-paragraph-list">
@@ -243,21 +270,25 @@
                             </ul>
                         </div>
                         <div class="my-card-footer text-center">
-                            <input type="button" id="addToContextBtn" value="Add to context" style="background-color: rgb(106, 141, 165); color: #fff; cursor: pointer;"/>
+                            <input type="button" id="addToContextBtn" class="btn btn-primary" value="Add to context"
+                                style="font-weight:900; background-color: #2dc391; color: #f8fbfb; cursor: pointer; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 15px; padding: 10px 15px;" />
                         </div>
                     </div>
                 </div>
-             
+
             </div>
         </div>
     </div>
-    <br>
+    <br><br>
     <div class="sale-statistic-area">
         <div class="container">
             <div class="my-row">
                 <div class="my-col-zero">
-                    <div class="my-text-center">
-                        <button class="my-btn my-btn-primary" id="generate-answer">Generate new answer</button>
+
+                    <div class="notika-todo-btn">
+                        <a href="" id="generate-answer" class="pull-right btn btn-primary btn-sm button-inactive"
+                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
+                            onclick="event.preventDefault();">Generate new answer</a>
                     </div>
                 </div>
             </div>
@@ -267,13 +298,14 @@
     <div class="sale-statistic-area">
         <div class="container">
             <div class="my-row my-filter-row">
-                    
+
                 <div class="my-col-textarea my-col-textarea-new-answer">
                     <div class="my-form-group">
-                        <textarea id="newanswerBox" rows="6" class="my-form-control" placeholder="Generated Answer"></textarea>
+                        <textarea id="newanswerBox" rows="7" class="my-form-control"
+                            placeholder="Generated Answer"></textarea>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -281,22 +313,51 @@
         <div class="container">
             <div class="my-row">
                 <div class="my-col-zero">
-                    <a href="" id="update" class="my-btn my-btn-primary" onclick="event.preventDefault();">Update answer</a>
-               
-                    <a href="" id="create" class="my-btn my-btn-primary" onclick="event.preventDefault();">Save new answer</a>
+                    <div class="notika-todo-btn">
+                        <a href="" id="update" class="pull-right btn btn-primary btn-sm button-inactive"
+                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
+                            onclick="event.preventDefault();">Update Answer</a>
+                    </div>
+                    <div class="notika-todo-btn">
+                        <a href="" id="create" class="pull-right btn btn-primary btn-sm button-inactive"
+                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
+                            onclick="event.preventDefault();">Create new Q/A</a>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Realtime sts area-->
+   >
+    <!-- Modal Structure -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body">
+                <h3 id="modal-text"></h3>
+
+            </div>
+            <div class="modal-footer">
+                <span class="close-button">Okay</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
     <!-- Start Footer area-->
     <div class="footer-copyright-area" style="background-color: rgb(43, 157, 239);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="footer-copy-right">
-                        <p>Copyright © 2018 
-. All rights reserved. <a href="">QA</a>.</p>
+                        <p>Copyright © 2024
+                            . All rights reserved. <a href="">QA</a>.</p>
                     </div>
                 </div>
             </div>
@@ -306,8 +367,8 @@
 
     <!-- jquery
 		============================================ -->
-        <script src="lib/script.js"></script>
-        <script>src="lib/layout.js"</script>
+    <script src="lib/answers.js"></script>
+    <script>src = "lib/layout.js"</script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <!-- bootstrap JS
 		============================================ -->
@@ -365,16 +426,29 @@
     <!-- plugins JS
 		============================================ -->
     <script src="js/plugins.js"></script>
-	<!--  Chat JS
+    <!--  Chat JS
 		============================================ -->
     <script src="js/chat/moment.min.js"></script>
     <script src="js/chat/jquery.chat.js"></script>
     <!-- main JS
 		============================================ -->
     <script src="js/main.js"></script>
-	<!-- tawk chat JS
+    <!-- tawk chat JS
 		============================================ -->
-   
+
+    <script>
+            (function checkLoginStatus() {
+                const isLoggedIn = localStorage.getItem('isLoggedIn');
+                if (!isLoggedIn) {
+                    window.location.href = 'index.html'; // Redirect if not "logged in"
+                }
+            })();
+
+        function endSession() {
+            localStorage.clear(); // This clears the entire localStorage. Use localStorage.removeItem('yourKey') if you want to remove a specific item.
+            window.location.href = 'index.html'; // Redirects to index.html
+        }
+    </script>
 </body>
 
 </html>
