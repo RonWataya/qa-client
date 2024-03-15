@@ -89,7 +89,8 @@
                     <div class="mobile-menu">
                         <nav id="dropdown">
                             <ul class="mobile-menu-nav">
-                                <li><a data-toggle="collapse" data-target="#Charts" href="#"><span style="color: rgb(24, 74, 110);">Home</span></a>
+                                <li><a data-toggle="collapse" data-target="#Charts" href="#"><span
+                                            style="color: rgb(24, 74, 110);">Home</span></a>
                                     <ul class="collapse dropdown-header-top">
                                         <li class="menu-item"><a href="answers" class="menu-link">Answers</a></li>
                                         <li class="menu-item"><a href="questions" class="menu-link">Questions</a></li>
@@ -97,11 +98,12 @@
                                 </li>
                                 <li><a data-toggle="collapse" data-target="#demoevent" href="#">Admin</a>
                                     <ul id="demoevent" class="collapse dropdown-header-top">
-                                        <li><a href="#" id="endSessionLink" onclick="event.preventDefault();">End Session</a></li>
+                                        <li><a href="#" id="endSessionLink" onclick="event.preventDefault();">End
+                                                Session</a></li>
                                     </ul>
                                 </li>
                             </ul>
-                            
+
                         </nav>
                     </div>
                 </div>
@@ -126,9 +128,11 @@
                     <div class="tab-content custom-menu-content">
                         <div id="Home" class="tab-pane in active notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
-                                <li><a href="answers"><span style="color: rgb(24, 74, 110);" class="menu-link">Answers</span></a>
+                                <li><a href="answers"><span style="color: rgb(24, 74, 110);"
+                                            class="menu-link">Answers</span></a>
                                 </li>
-                                <li><a href="questions"><span style="color: rgb(55, 200, 230);" class="menu-link">Questions</span></a>
+                                <li><a href="questions"><span style="color: rgb(55, 200, 230);"
+                                            class="menu-link">Questions</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -144,8 +148,8 @@
     </div>
     <!-- Main Menu area End-->
 
-     <!-- Select Document -->
-     <div class="notika-status-area">
+    <!-- Select Document -->
+    <div class="notika-status-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -175,7 +179,7 @@
             </div>
         </div>
     </div>
-   
+
 
     <div class="sale-statistic-area">
         <div class="container">
@@ -230,8 +234,8 @@
         </div>
     </div>
 
-    
-    <!-- Questions-->   
+
+    <!-- Questions-->
     <br><br>
     <div class="sale-statistic-area">
         <div class="container">
@@ -251,14 +255,18 @@
     <div class="sale-statistic-area">
         <div class="container">
             <div class="my-row my-filter-row">
-
                 <div class="my-col-textarea my-col-textarea-new-answer">
+                    <!-- Existing textarea for displaying questions -->
                     <div class="my-form-group">
                         <textarea id="questionsBox" rows="7" class="my-form-control"
-                            placeholder="Generated Answer"></textarea>
+                            placeholder="Generated Questions"></textarea>
+                    </div>
+                    <!-- Navigation Buttons -->
+                    <div style="margin-top: 10px;">
+                        <button id="prevQuestion" class="btn btn-secondary btn-sm">Previous Question</button>
+                        <button id="nextQuestion" class="btn btn-secondary btn-sm">Next Question</button>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -293,7 +301,7 @@
             </div>
         </div>
     </div>
-    
+
     <br><br>
     <div class="sale-statistic-area">
         <div class="container">
@@ -313,7 +321,7 @@
     <div class="sale-statistic-area">
         <div class="container">
             <div class="my-row my-filter-row">
-
+    
                 <div class="my-col-textarea my-col-textarea-new-answer">
                     <div class="recent-items-wp notika-shadow sm-res-mg-t-30">
                         <div class="rc-it-ltd">
@@ -323,51 +331,34 @@
                                 </div>
                             </div>
                             <div class="recent-items-inn">
-                                <table class="table table-inner table-vmiddle">
+                                <!-- Table for displaying drafts -->
+                                <table class="table table-inner table-vmiddle" id="draftTable">
                                     <thead>
                                         <tr>
-                                            <th>Question</th>
-                                            <th>Answer</th>
-                                            <th style="width: 60px">Context</th>
+                                            <th class="question-column">Question</th>
+                                            <th class="answer-column">Answer</th>
+                                            <th class="context-column">Context</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <!-- Example row, can be removed if you prefer an empty table initially -->
                                         <tr>
-                                            <td class="f-500 c-cyan">Question one</td>
-                                            <td>Answer one</td>
+                                            <td class="f-500 c-cyan">Example Question</td>
+                                            <td>Example Answer</td>
                                             <td class="f-500 c-cyan">DOC 1: 23,45</td>
                                         </tr>
-                                        <tr>
-                                            <td class="f-500 c-cyan">Question one</td>
-                                            <td>Answer one</td>
-                                            <td class="f-500 c-cyan">DOC 1: 23,45</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="f-500 c-cyan">Question one</td>
-                                            <td>Answer one</td>
-                                            <td class="f-500 c-cyan">DOC 1: 23,45</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="f-500 c-cyan">Question one</td>
-                                            <td>Answer one</td>
-                                            <td class="f-500 c-cyan">DOC 1: 23,45</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="f-500 c-cyan">Question one</td>
-                                            <td>Answer one</td>
-                                            <td class="f-500 c-cyan">DOC 1: 23,45</td>
-                                        </tr>
+                                        <!-- Rows will be dynamically added here -->
                                     </tbody>
                                 </table>
                             </div>
-							
                         </div>
                     </div>
                 </div>
-
+    
             </div>
         </div>
     </div>
+    
     <div class="sale-statistic-area">
         <div class="container">
             <div class="my-row">
@@ -391,115 +382,117 @@
                 </div>
             </div>
         </div>
-    
-    <!-- Modal Structure -->
-    <div id="modal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <div class="modal-header">
 
-            </div>
-            <div class="modal-body">
-                <h3 id="modal-text"></h3>
+        <!-- Modal Structure -->
+        <div id="modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
 
-            </div>
-            <div class="modal-footer">
-                <span class="close-button">Okay</span>
+                </div>
+                <div class="modal-body">
+                    <h3 id="modal-text"></h3>
+
+                </div>
+                <div class="modal-footer">
+                    <span class="close-button">Okay</span>
+                </div>
             </div>
         </div>
-    </div>
 
 
 
 
 
 
-    <!-- Start Footer area-->
-    <div class="footer-copyright-area" style="background-color: rgb(43, 157, 239);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="footer-copy-right">
-                        <p>Copyright © 2024
-                            . All rights reserved. <a href="">QA</a>.</p>
+        <!-- Start Footer area-->
+        <div class="footer-copyright-area" style="background-color: rgb(43, 157, 239);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="footer-copy-right">
+                            <p>Copyright © 2024
+                                . All rights reserved. <a href="">QA</a>.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Footer area-->
+        <!-- End Footer area-->
 
-    <!-- jquery
+        <!-- jquery
 		============================================ -->
-    <script src="lib/questions.js"></script>
-    <script>src = "lib/layout.js"</script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- bootstrap JS
+        <script src="lib/questions.js"></script>
+        <script>src = "lib/layout.js"</script>
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <!-- bootstrap JS
 		============================================ -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- wow JS
+        <script src="js/bootstrap.min.js"></script>
+        <!-- wow JS
 		============================================ -->
-    <script src="js/wow.min.js"></script>
-    <!-- price-slider JS
+        <script src="js/wow.min.js"></script>
+        <!-- price-slider JS
 		============================================ -->
-    <script src="js/jquery-price-slider.js"></script>
-    <!-- owl.carousel JS
+        <script src="js/jquery-price-slider.js"></script>
+        <!-- owl.carousel JS
 		============================================ -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- scrollUp JS
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- scrollUp JS
 		============================================ -->
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <!-- meanmenu JS
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <!-- meanmenu JS
 		============================================ -->
-    <script src="js/meanmenu/jquery.meanmenu.js"></script>
-    <!-- counterup JS
+        <script src="js/meanmenu/jquery.meanmenu.js"></script>
+        <!-- counterup JS
 		============================================ -->
-    <script src="js/counterup/jquery.counterup.min.js"></script>
-    <script src="js/counterup/waypoints.min.js"></script>
-    <script src="js/counterup/counterup-active.js"></script>
-    <!-- mCustomScrollbar JS
+        <script src="js/counterup/jquery.counterup.min.js"></script>
+        <script src="js/counterup/waypoints.min.js"></script>
+        <script src="js/counterup/counterup-active.js"></script>
+        <!-- mCustomScrollbar JS
 		============================================ -->
-    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <!-- jvectormap JS
+        <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <!-- jvectormap JS
 		============================================ -->
-    <script src="js/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="js/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="js/jvectormap/jvectormap-active.js"></script>
-    <!-- sparkline JS
+        <script src="js/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+        <script src="js/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="js/jvectormap/jvectormap-active.js"></script>
+        <!-- sparkline JS
 		============================================ -->
-    <script src="js/sparkline/jquery.sparkline.min.js"></script>
-    <script src="js/sparkline/sparkline-active.js"></script>
-    <!-- sparkline JS
+        <script src="js/sparkline/jquery.sparkline.min.js"></script>
+        <script src="js/sparkline/sparkline-active.js"></script>
+        <!-- sparkline JS
 		============================================ -->
-    <script src="js/flot/jquery.flot.js"></script>
-    <script src="js/flot/jquery.flot.resize.js"></script>
-    <script src="js/flot/curvedLines.js"></script>
-    <script src="js/flot/flot-active.js"></script>
-    <!-- knob JS
+        <script src="js/flot/jquery.flot.js"></script>
+        <script src="js/flot/jquery.flot.resize.js"></script>
+        <script src="js/flot/curvedLines.js"></script>
+        <script src="js/flot/flot-active.js"></script>
+        <!-- knob JS
 		============================================ -->
-    <script src="js/knob/jquery.knob.js"></script>
-    <script src="js/knob/jquery.appear.js"></script>
-    <script src="js/knob/knob-active.js"></script>
-    <!--  wave JS
+        <script src="js/knob/jquery.knob.js"></script>
+        <script src="js/knob/jquery.appear.js"></script>
+        <script src="js/knob/knob-active.js"></script>
+        <!--  wave JS
 		============================================ -->
-    <script src="js/wave/waves.min.js"></script>
-    <script src="js/wave/wave-active.js"></script>
-    <!--  todo JS
+        <script src="js/wave/waves.min.js"></script>
+        <script src="js/wave/wave-active.js"></script>
+        <!--  todo JS
 		============================================ -->
-    <script src="js/todo/jquery.todo.js"></script>
-    <!-- plugins JS
+        <script src="js/todo/jquery.todo.js"></script>
+        <!-- plugins JS
 		============================================ -->
-    <script src="js/plugins.js"></script>
-    <!--  Chat JS
+        <script src="js/plugins.js"></script>
+        <!--  Chat JS
 		============================================ -->
-    <script src="js/chat/moment.min.js"></script>
-    <script src="js/chat/jquery.chat.js"></script>
-    <!-- main JS
+        <script src="js/chat/moment.min.js"></script>
+        <script src="js/chat/jquery.chat.js"></script>
+        <!-- main JS
 		============================================ -->
-    <script src="js/main.js"></script>
-    <!-- tawk chat JS
+        <script src="js/main.js"></script>
+        <!-- tawk chat JS
 		============================================ -->
 
-    <script>
+        <script>
+          
+            //logged in status
             (function checkLoginStatus() {
                 const isLoggedIn = localStorage.getItem('isLoggedIn');
                 if (!isLoggedIn) {
@@ -507,11 +500,101 @@
                 }
             })();
 
-        function endSession() {
-            localStorage.clear(); // This clears the entire localStorage. Use localStorage.removeItem('yourKey') if you want to remove a specific item.
-            window.location.href = 'index.html'; // Redirects to index.html
-        }
-    </script>
+            function endSession() {
+                localStorage.clear(); // This clears the entire localStorage. Use localStorage.removeItem('yourKey') if you want to remove a specific item.
+                window.location.href = 'index.html'; // Redirects to index.html
+            }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function () {
+            let currentQuestionIndex = 0;
+            let questionsCache = [];
+        
+            function updateQuestionDisplay() {
+                $("#questionsBox").val(questionsCache[currentQuestionIndex]);
+                $("#prevQuestion").prop('disabled', currentQuestionIndex === 0);
+                $("#nextQuestion").prop('disabled', currentQuestionIndex === questionsCache.length - 1);
+            }
+        
+            $("#generate-question").click(function () {
+                var contexts = [];
+                $("#contextList").find("li").each(function () {
+                    contexts.push($(this).text());
+                });
+        
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:3000/generate-questions", // Update this to your actual backend endpoint
+                    contentType: "application/json",
+                    data: JSON.stringify({ contexts: contexts }),
+                    success: function(response) {
+                        questionsCache = response.questions;
+                        currentQuestionIndex = 0;
+                        updateQuestionDisplay();
+                    },
+                    error: function() {
+                        alert("Failed to generate questions.");
+                    }
+                });
+            });
+        
+            $("#nextQuestion").click(function () {
+                if (currentQuestionIndex < questionsCache.length - 1) {
+                    currentQuestionIndex++;
+                    updateQuestionDisplay();
+                }
+            });
+        
+            $("#prevQuestion").click(function () {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    updateQuestionDisplay();
+                }
+            });
+        });
+        </script>
+        <script>
+            document.getElementById('copy-to-draft').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link action
+            
+                const questionText = document.getElementById('questionsBox').value; // Adjust ID as necessary
+                const answerText = document.getElementById('answersBox').value; // Assuming there's an answerBox similar to questionBox
+                const contextItems = document.querySelectorAll('.my-context-list li');
+            
+                // Validate question text and answer text are not empty
+                if (!questionText || !answerText) {
+                    alert('Question and/or answer text cannot be empty.');
+                    return; // Stop execution if either is empty
+                }
+            
+                // Map context items to their doc and parag IDs, grouped by docId
+                let contextMap = new Map();
+                contextItems.forEach(item => {
+                    const docId = item.dataset.docId;
+                    const paragId = item.dataset.paragId;
+                    if (!contextMap.has(docId)) {
+                        contextMap.set(docId, []);
+                    }
+                    contextMap.get(docId).push(paragId);
+                });
+            
+                // Formulate the context string in the desired format
+                let contextStr = Array.from(contextMap).map(([docId, paragIds]) => `DOC ${docId}:${paragIds.join(',')}`).join('; ');
+            
+                // Append to the draft table
+                const draftTableBody = document.querySelector('.table.table-inner.table-vmiddle tbody');
+                const newRow = draftTableBody.insertRow();
+                const questionCell = newRow.insertCell(0);
+                const answerCell = newRow.insertCell(1);
+                const contextCell = newRow.insertCell(2);
+            
+                questionCell.textContent = questionText;
+                answerCell.textContent = answerText;
+                contextCell.textContent = contextStr;
+            });
+            </script>
+            
 </body>
 
 </html>

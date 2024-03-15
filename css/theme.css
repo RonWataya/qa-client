@@ -496,6 +496,9 @@ p {
     pointer-events: none;
 }
 
+.question-column { width: 40%; }
+.answer-column { width: 40%; }
+.context-column { width: 20%; }
 
 
 
