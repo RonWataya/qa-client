@@ -175,8 +175,28 @@
                         </div>
 
                     </div>
+                   
                 </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="my-form-group my-select-focus">
+
+                        <div class="my-form-group" sty>
+                            <label class="my-focus-label" style="visibility: hidden;">Search by phrase or
+                                keyword</label>
+                                <div class="notika-todo-btn">
+                                    <a href="questions" class="pull-left btn btn-primary btn-sm" id="clearAnswer"
+                                        style="margin-right: 10px; font-size: 15px; padding: 7px 12px;"
+                                       >Clear text</a>
+                                </div>
+                        </div>
+
+                    </div>
+                   
+                </div>
+                
+                
             </div>
+            
         </div>
     </div>
 
@@ -520,7 +540,7 @@
         
                 $.ajax({
                     type: "POST",
-                    url: "http://localhost:3000/generate-questions", // Update this to your actual backend endpoint
+                    url: "http://ec2-3-88-156-72.compute-1.amazonaws.com:3000/generate-questions", // Update this to your actual backend endpoint
                     contentType: "application/json",
                     data: JSON.stringify({ contexts: contexts }),
                     success: function(response) {
