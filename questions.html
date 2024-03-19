@@ -260,7 +260,33 @@
         <div class="container">
             <div class="my-row">
                 <div class="my-col-zero">
-
+                    <!-- Start of new form for entering number of questions and selecting question types -->
+                    <div class="question-options-form">
+                        <form id="questionOptionsForm">
+                            <div class="my-form-group">
+                                <label for="numberOfQuestions">Number of Questions:</label>
+                                <input type="number" id="numberOfQuestions" name="numberOfQuestions" style="width: 20%;" class="form-control" min="1" placeholder="Enter number">
+                            </div>
+                            <div class="form-group">
+                                <label>Question Types:</label>
+                                <div>
+                                    <input type="checkbox" id="typeWhy" name="questionType" value="why">
+                                    <label for="typeWhy">Why</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="typeWho" name="questionType" value="who">
+                                    <label for="typeWho">Who</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="typeWhat" name="questionType" value="what">
+                                    <label for="typeWhat">What</label>
+                                </div>
+                                <!-- Add more checkboxes as needed for other question types -->
+                            </div>
+                        </form>
+                    </div>
+                    <!-- End of new form -->
+                    
                     <div class="notika-todo-btn">
                         <a href="" id="generate-question" class="pull-left btn btn-primary btn-sm button-inactive"
                             style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
@@ -270,6 +296,7 @@
             </div>
         </div>
     </div>
+    
     <br>
     <div class="sale-statistic-area">
         <div class="container">
