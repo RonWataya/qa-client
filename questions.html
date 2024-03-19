@@ -436,7 +436,6 @@
         <!-- jquery
 		============================================ -->
         <script src="lib/questions.js"></script>
-        <script>src = "lib/layout.js"</script>
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
         <!-- bootstrap JS
 		============================================ -->
@@ -521,122 +520,7 @@
         </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
-
-        <script>
-            $(document).ready(function () {
-                let currentQuestionIndex = 0;
-                let questionsCache = [];
-
-                function updateQuestionDisplay() {
-                    $("#questionsBox").val(questionsCache[currentQuestionIndex]);
-                    $("#prevQuestion").prop('disabled', currentQuestionIndex === 0);
-                    $("#nextQuestion").prop('disabled', currentQuestionIndex === questionsCache.length - 1);
-                }
-
-                $("#generate-question").click(function () {
-                    var contexts = [];
-                    $("#contextList").find("li").each(function () {
-                        contexts.push($(this).text());
-                    });
-
-                    $.ajax({
-                        type: "POST",
-                        url: "http://ec2-3-88-156-72.compute-1.amazonaws.com:3000/generate-questions", // Update this to your actual backend endpoint
-                        contentType: "application/json",
-                        data: JSON.stringify({ contexts: contexts }),
-                        success: function (response) {
-                            questionsCache = response.questions;
-                            currentQuestionIndex = 0;
-                            updateQuestionDisplay();
-                        },
-                        error: function () {
-                            alert("Failed to generate questions.");
-                        }
-                    });
-                });
-
-                $("#nextQuestion").click(function () {
-                    if (currentQuestionIndex < questionsCache.length - 1) {
-                        currentQuestionIndex++;
-                        updateQuestionDisplay();
-                    }
-                });
-
-                $("#prevQuestion").click(function () {
-                    if (currentQuestionIndex > 0) {
-                        currentQuestionIndex--;
-                        updateQuestionDisplay();
-                    }
-                });
-            });
-        </script>
-        <script>
-            document.getElementById('copy-to-draft').addEventListener('click', function (event) {
-                event.preventDefault(); // Prevent the default link action
-
-                const questionText = document.getElementById('questionsBox').value; // Adjust ID as necessary
-                const answerText = document.getElementById('answersBox').value; // Assuming there's an answerBox similar to questionBox
-                const contextItems = document.querySelectorAll('.my-context-list li');
-
-                // Validate question text and answer text are not empty
-                if (!questionText || !answerText) {
-                    alert('Question and/or answer text cannot be empty.');
-                    return; // Stop execution if either is empty
-                }
-
-                // Map context items to their doc and parag IDs, grouped by docId
-                let contextMap = new Map();
-                contextItems.forEach(item => {
-                    const docId = item.dataset.docId;
-                    const paragId = item.dataset.paragId;
-                    if (!contextMap.has(docId)) {
-                        contextMap.set(docId, []);
-                    }
-                    contextMap.get(docId).push(paragId);
-                });
-
-                // Formulate the context string in the desired format
-                let contextStr = Array.from(contextMap).map(([docId, paragIds]) => `DOC ${docId}:${paragIds.join(',')}`).join('; ');
-
-                // Append to the draft table
-                const draftTableBody = document.querySelector('.table.table-inner.table-vmiddle tbody');
-                const newRow = draftTableBody.insertRow();
-                const questionCell = newRow.insertCell(0);
-                const answerCell = newRow.insertCell(1);
-                const contextCell = newRow.insertCell(2);
-
-                questionCell.textContent = questionText;
-                answerCell.textContent = answerText;
-                contextCell.textContent = contextStr;
-            });
-        </script>
-        <script>
-            function exportTableToExcel() {
-                // Read the table element
-                let table = document.getElementById("draftTable");
-                let workbook = XLSX.utils.table_to_book(table, { sheet: "Draft" });
-                // Export the workbook
-                XLSX.writeFile(workbook, "DraftPreview.xlsx");
-            }
-
-            // Attach the export function to your preview button
-            document.getElementById("preview").addEventListener("click", event => {
-                event.preventDefault(); // Prevent default link behavior
-                exportTableToExcel();
-            });
-
-            //Print
-            function printTable() {
-                window.print();
-            }
-
-            // Attach the print function to your print button
-            document.getElementById("print").addEventListener("click", event => {
-                event.preventDefault(); // Prevent default link behavior
-                printTable();
-            });
-
-        </script>
+        <script src = "lib/appFunctions.js"></script>
 
 </body>
 
