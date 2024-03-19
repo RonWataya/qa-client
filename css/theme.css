@@ -496,9 +496,33 @@ p {
     pointer-events: none;
 }
 
-.question-column { width: 40%; }
-.answer-column { width: 40%; }
-.context-column { width: 20%; }
+.table th, .table td {
+    border: 1px solid black; /* Adds a border to table headers and cells */
+}
+
+/* Specific column width adjustments remain the same */
+.question-column, .answer-column {
+    width: 40%;
+}
+
+.context-column {
+    width: 20%;
+}
+
+
+@media print {
+    body * {
+        visibility: hidden; /* Hide everything in the body when printing... */
+    }
+    #draftTable, #draftTable * {
+        visibility: visible; /* ...except the table and its contents */
+    }
+    #draftTable {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
 
 
 
