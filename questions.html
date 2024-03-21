@@ -258,38 +258,46 @@
     <br><br>
     <div class="sale-statistic-area">
         <div class="container">
-            <div class="my-row">
-                <div class="my-col-zero">
+            <div class="my-row my-filter-row">
+                <div class="my-col-textarea my-col-textarea-new-answer">
                     <!-- Start of new form for entering number of questions and selecting question types -->
                     <div class="question-options-form">
                         <form id="questionOptionsForm">
                             <div class="my-form-group">
                                 <label for="numberOfQuestions">Number of Questions:</label>
-                                <input type="number" id="numberOfQuestions" name="numberOfQuestions" style="width: 20%;" class="form-control" min="1" placeholder="Enter number">
+                                <input type="number" id="numberOfQuestions" name="numberOfQuestions" style="width: 20%;" class="form-control" min="1" placeholder="Number">
                             </div>
                             <div class="form-group">
                                 <label>Question Types:</label>
                                 <div>
-                                    <input type="checkbox" id="typeWhy" name="questionType" value="why">
-                                    <label for="typeWhy">Why</label>
+                                    <input type="checkbox" id="typeWhy" name="questionType" value="what">
+                                    <label for="typeWhy">What</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="typeWho" name="questionType" value="who">
-                                    <label for="typeWho">Who</label>
+                                    <input type="checkbox" id="typeWho" name="questionType" value="which">
+                                    <label for="typeWho">Which</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="typeWhat" name="questionType" value="what">
-                                    <label for="typeWhat">What</label>
+                                    <input type="checkbox" id="typeWhat" name="questionType" value="how">
+                                    <label for="typeWhat">How</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="typeWho" name="questionType" value="compare">
+                                    <label for="typeWho">Compare</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="typeWhat" name="questionType" value="who">
+                                    <label for="typeWhat">Who</label>
                                 </div>
                                 <!-- Add more checkboxes as needed for other question types -->
                             </div>
                         </form>
                     </div>
                     <!-- End of new form -->
-                    
+                    <br>
                     <div class="notika-todo-btn">
                         <a href="" id="generate-question" class="pull-left btn btn-primary btn-sm button-inactive"
-                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
+                            style="margin-left: 0px; font-size: 15px; padding: 10px 15px;"
                             onclick="event.preventDefault();">Generate Questions </a>
                     </div>
                 </div>
@@ -308,7 +316,7 @@
                             placeholder="Generated Questions"></textarea>
                     </div>
                     <!-- Navigation Buttons -->
-                    <div style="margin-top: 10px;">
+                    <div style="margin-top: -20px;">
                         <button id="prevQuestion" class="btn btn-secondary btn-sm">Previous Question</button>
                         <button id="nextQuestion" class="btn btn-secondary btn-sm">Next Question</button>
                     </div>
@@ -325,10 +333,12 @@
 
                     <div class="notika-todo-btn">
                         <a href="" id="generate-answer" class="pull-left btn btn-primary btn-sm button-inactive"
-                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
+                            style="margin-left: 0px; font-size: 15px; padding: 10px 15px;"
                             onclick="event.preventDefault();">Generate Answers </a>
                     </div>
+                   
                 </div>
+                
             </div>
         </div>
     </div>
@@ -339,8 +349,11 @@
 
                 <div class="my-col-textarea my-col-textarea-new-answer">
                     <div class="my-form-group">
-                        <textarea id="answersBox" rows="7" class="my-form-control"
-                            placeholder="Generated Answer"></textarea>
+                        <textarea id="answersBox" rows="7" class="my-form-control" placeholder="Generated Answer" readonly></textarea>
+
+                    </div>
+                    <div style="margin-top: -23px;">
+                        <button id="edit-mode" class="btn btn-secondary btn-sm">Edit-Mode</button>
                     </div>
                 </div>
 
@@ -356,7 +369,7 @@
 
                     <div class="notika-todo-btn">
                         <a href="" id="copy-to-draft" class="pull-left btn btn-primary btn-sm button-inactive"
-                            style="margin-left: 10px; font-size: 15px; padding: 10px 15px;"
+                            style="margin-left: 0px; font-size: 15px; padding: 10px 15px;"
                             onclick="event.preventDefault();">Copy to draft </a>
                     </div>
                 </div>

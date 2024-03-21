@@ -524,6 +524,60 @@ p {
     }
 }
 
+.question-options-form {
+    max-width: 600px; /* Adjust based on your design needs */
+    margin-right: 5px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visual separation */
+}
+
+.my-form-group, .form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group div {
+    display: inline-block; /* Aligns checkboxes horizontally */
+    margin-right: 15px; /* Space between checkbox groups */
+}
+
+/* Style adjustments for input[type="number"] to fit better in the form */
+input[type="number"] {
+    width: 100%; /* Full width */
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Ensuring consistent appearance for all form controls */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .form-group div {
+        display: block; /* Stacks checkboxes vertically on smaller screens */
+        margin-right: 0;
+        margin-bottom: 10px; /* Adds space between stacked checkbox groups */
+    }
+}
+
+/* Example of defining custom colors for the button, if needed */
+.btn-success {
+    background-color: #28a745; /* Bootstrap's default success color */
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
 
 
 /* Responsive Design Adjustments */
